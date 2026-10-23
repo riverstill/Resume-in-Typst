@@ -140,7 +140,7 @@
 
 上面的模板是否过于复杂？想从一个简单的模板入门 Typst？不想修改复杂的 `template.typ` 文件？
 
-可以尝试一下不需要模板文件、仅需要 Typst 原生语法的 [简单模板](examples/simple.typ)：
+可以尝试一下不需要模板文件、仅需要 Typst 原生语法的 [简单模板](simple-resume.typ)：
 
 ![](examples/simple-resume.png)
 

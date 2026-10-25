@@ -35,7 +35,7 @@
   //header-center: true,
 
   // 如果不需要头像，则将下面三行的参数注释或删除
-  photograph: "profile.jpg",
+  photograph: "profile.jpg", //若文件与本模板不在同一目录，需要用path()传入图片路径
   photograph-width: 10em,
   gutter-width: 2em,
 )[

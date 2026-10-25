@@ -42,6 +42,12 @@
   // 基础字体设定
   set text(font: (font.main, font.cjk), size: size, lang: "zh")
 
+  //内容颜色淡一点
+  show text.where(weight: "regular",fill:black): set text(fill: rgb("#222222"))
+
+  //show strong: set text(fill: black) 会覆盖加粗link的颜色
+  // 可以全局设置淡一点，再将强调元素显示加黑
+
   // 标题及小标题样式
   show heading: set text(theme-color, 1.1em)
 

@@ -7,17 +7,18 @@
 
 // 图标
 // box中的内容是从左往右从上往下（align:top）的，baseline默认取第一行内容基线（bottom）,即使是align环境中
-#let icon(path, fill: rgb("#000000")) = box(
-  baseline: (-0.2em-0.1em), //(0.7-0.3)/2=0.2时会到原来的位置，同时应该height小于正常字高，所以提高图标位置不会影响排版
-  height: 0.3em,
+#let icon(path, fill: rgb("#000000"),shift:0pt) = box(
+  height: 0.7em,
   width: 1.25em,
   align(
     center + horizon,
-    image(bytes(read(path).replace("path d", "path fill=\"" + fill.to-hex() + "\" d")), height: 1em), // 替换法修改svg颜色
+    move(dy:-shift, // move只在视觉上移动内容，仍按原位情况排版
+      image(bytes(read(path).replace("path d", "path fill=\"" + fill.to-hex() + "\" d")), height: 1em) // 替换法修改svg颜色
+      ), 
   ),
 )
 
-#let fa-angle-right = icon("icons/fa-angle-right.svg")
+#let fa-angle-right = icon("icons/fa-angle-right.svg",shift: 0.05em)
 
 // 主体
 #let resume(

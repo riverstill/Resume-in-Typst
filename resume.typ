@@ -6,15 +6,15 @@
 
 // 设置图标, 来源: https://fontawesome.com/icons/
 #let fa-award = icon("icons/fa-award.svg")
-#let fa-building-columns = icon("icons/fa-building-columns.svg")
+#let fa-building-columns = icon("icons/fa-building-columns.svg",shift: 0.1em)
 #let fa-code = icon("icons/fa-code.svg")
 #let fa-envelope = icon("icons/fa-envelope.svg")
 #let fa-github = icon("icons/fa-github.svg")
-#let fa-graduation-cap = icon("icons/fa-graduation-cap.svg")
+#let fa-graduation-cap = icon("icons/fa-graduation-cap.svg",shift: 0.05em)
 #let fa-linux = icon("icons/fa-linux.svg")
 #let fa-phone = icon("icons/fa-phone.svg")
 #let fa-windows = icon("icons/fa-windows.svg")
-#let fa-wrench = icon("icons/fa-wrench.svg")
+#let fa-wrench = icon("icons/fa-wrench.svg",shift: 0.05em)
 #let fa-work = icon("icons/fa-work.svg")
 
 // 设置简历选项与头部

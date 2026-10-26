@@ -6,13 +6,14 @@
 )
 
 // 图标
+// box中的内容是从左往右从上往下（align:top）的，baseline默认取第一行内容基线（bottom）,即使是align环境中
 #let icon(path, fill: rgb("#000000")) = box(
   // baseline: 0.125em,
   height: 0.7em,
   width: 1.25em,
   align(
     center + horizon,
-    image(bytes(read(path).replace("path d", "path fill=\"" + fill.to-hex() + "\" d")), height: 1em),
+    image(bytes(read(path).replace("path d", "path fill=\"" + fill.to-hex() + "\" d")), height: 1em), // 替换法修改svg颜色
   ),
 )
 
@@ -61,22 +62,22 @@
   )
 
   // 更改 bullet list 的图标
-  // set list(indent: 1em, body-indent: 0.8em, marker: faAngleRight)
+   set list(indent: 0.75em, body-indent: 0em, marker: fa-angle-right)
   // 上面的语句无法精确控制图标位置, 因此改用了下列方法重写 list
-  show list: it => stack(
-    spacing: 0.4em,
-    ..it.children.map(item => {
-      grid(
-        columns: (2em, 1fr),
-        gutter: 0em,
-        box({
-          h(0.75em)
-          fa-angle-right
-        }),
-        pad(top: 0.15em, item.body),
-      )
-    }),
-  )
+ // show list: it => stack(
+ //   spacing: 0.4em,
+ //   ..it.children.map(item => {
+ //     grid(
+ //       columns: (2em, 1fr),
+ //       gutter: 0em,
+ //       box({
+ //         h(0.75em)
+ //         fa-angle-right
+ //       }),
+ //       pad(top: 0.15em, item.body), //只对文字做了top-pad，导致list图片偏上。这是目的（精确控制……）？
+ //     )
+ //   }),
+ // )
 
   // 链接颜色
   show link: set text(fill: theme-color)

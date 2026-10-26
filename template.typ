@@ -32,7 +32,7 @@
   ),
   photograph: "",
   photograph-width: 0em,
-  gutter-width: 0em,
+  gutter-width: 2em,
   header-center: false,
   header,
   introduction,
@@ -94,8 +94,8 @@
     introduction
   } else {
     grid(
-      columns: (auto, 1fr, photograph-width),
-      gutter: (gutter-width, 0em),
+      columns: (auto, photograph-width),
+      gutter: gutter-width,
       [#header #introduction],
       if photograph != "" {
         image(photograph, width: photograph-width)

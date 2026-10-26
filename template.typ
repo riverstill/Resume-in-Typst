@@ -8,8 +8,8 @@
 // 图标
 // box中的内容是从左往右从上往下（align:top）的，baseline默认取第一行内容基线（bottom）,即使是align环境中
 #let icon(path, fill: rgb("#000000")) = box(
-  // baseline: 0.125em,
-  height: 0.7em,
+  baseline: (-0.2em-0.1em), //(0.7-0.3)/2=0.2时会到原来的位置，同时应该height小于正常字高，所以提高图标位置不会影响排版
+  height: 0.3em,
   width: 1.25em,
   align(
     center + horizon,

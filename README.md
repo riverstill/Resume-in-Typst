@@ -134,3 +134,16 @@
 - 开发了容器资源动态伸缩和负载均衡模块
 - 使用 Prometheus 和 Grafana 构建监控告警系统
 ```
+
+## 字体与图标
+
+### 字体
+
+使用开源的字体：
+
+- IBM Plex(Serif, Mono)
+- Noto Serif SC
+
+### 图标
+
+使用Font Awesome 6 图标。

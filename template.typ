@@ -8,7 +8,8 @@
 // 图标
 // box中的内容是从左往右从上往下（align:top）的，baseline默认取第一行内容基线（bottom）,即使是align环境中
 #let icon(path, fill: rgb("#000000"),shift:0pt) = box(
-  height: 0.7em,
+  baseline: -0.2em,
+  height: 0.3em,
   width: 1.25em,
   align(
     center + horizon,
